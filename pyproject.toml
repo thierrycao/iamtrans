@@ -1,5 +1,5 @@
 [project]
-name = "ITrans"
+name = "iamtrans"
 version = "1.0.0"
 description = "Terminal-based translation tool with TUI interface"
 readme = "README.md"
@@ -39,13 +39,13 @@ build = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/thierrycao/ITrans"
-Documentation = "https://github.com/thierrycao/ITrans#readme"
-Repository = "https://github.com/thierrycao/ITrans"
-Issues = "https://github.com/thierrycao/ITrans/issues"
+Homepage = "https://github.com/thierrycao/iamtrans"
+Documentation = "https://github.com/thierrycao/iamtrans#readme"
+Repository = "https://github.com/thierrycao/iamtrans"
+Issues = "https://github.com/thierrycao/iamtrans/issues"
 
 [project.scripts]
-itrans = "itrans:main"
+iamtrans = "iamtrans:main"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]

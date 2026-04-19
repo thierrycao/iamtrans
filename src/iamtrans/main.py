@@ -1,12 +1,12 @@
-"""ITrans CLI 主入口
+"""iamtrans CLI 主入口
 
 两种模式，随你选：
 
 1. TUI 模式（默认）—— 三列浮窗，词典卡片，赏心悦目
-   $ itrans
+   $ iamtrans
 
 2. 简洁模式 —— 一行命令，一行输出，适合脚本调用
-   $ itrans Hello World
+   $ iamtrans Hello World
    你好世界
 
 参数虽多，但大部分时候你不需要用：
@@ -31,7 +31,7 @@ import sys
 from typing import Optional, List
 
 from .translator import TranslatorEngine, ENGINES, LANGUAGES
-from .ui.app import ITransFloatApp
+from .ui.app import IAmTransFloatApp
 
 
 def main(args: Optional[List[str]] = None):
@@ -41,16 +41,16 @@ def main(args: Optional[List[str]] = None):
         args: 命令行参数（默认使用 sys.argv）
     """
     parser = argparse.ArgumentParser(
-        prog='itrans',
-        description='ITrans - 终端翻译工具',
+        prog='iamtrans',
+        description='iamtrans - 终端翻译工具',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
 示例:
-  itrans                    启动 TUI 交互界面
-  itrans Hello World        简洁模式翻译
-  itrans --text "Hello" --to zh-CN  指定目标语言
-  itrans --engine mymemory  使用 MyMemory 引擎
-  itrans --from en --to ja  指定源语言和目标语言
+  iamtrans                    启动 TUI 交互界面
+  iamtrans Hello World        简洁模式翻译
+  iamtrans --text "Hello" --to zh-CN  指定目标语言
+  iamtrans --engine mymemory  使用 MyMemory 引擎
+  iamtrans --from en --to ja  指定源语言和目标语言
 
 快捷键 (TUI模式):
   Enter     翻译
@@ -152,7 +152,7 @@ def main(args: Optional[List[str]] = None):
             sys.exit(1)
     else:
         # 默认模式：启动 TUI（浮窗模式）
-        app = ITransFloatApp()
+        app = IAmTransFloatApp()
         if parsed.inline:
             app.run_inline()
         else:

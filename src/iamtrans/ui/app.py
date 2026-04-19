@@ -1,4 +1,4 @@
-"""ITrans 浮窗翻译工具 - 三列精炼设计
+"""iamtrans 浮窗翻译工具 - 三列精炼设计
 
 界面布局（50字符宽度，紧凑不占屏）：
 
@@ -270,7 +270,7 @@ class TripleColumnScreen(Screen):
             child.remove()
         for child in list(trans_col.children):
             child.remove()
-        dict_col.mount(Label("⏳ 查询中...", classes="empty-hint"))
+        dict_col.mount(Label("⏳ 查询���...", classes="empty-hint"))
         trans_col.mount(Label("⏳ 翻译中...", classes="empty-hint"))
 
     def _worker_translate(self, text: str):
@@ -351,8 +351,8 @@ class TripleColumnScreen(Screen):
 
 # ==================== 主应用 ====================
 
-class ITransFloatApp(App):
-    """ITrans 浮窗翻译应用"""
+class IAmTransFloatApp(App):
+    """iamtrans 浮窗翻译应用"""
 
     CSS = """
     App {

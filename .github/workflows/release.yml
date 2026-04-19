@@ -47,15 +47,15 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build with PyInstaller
-        run: pyinstaller ITrans.spec
+        run: pyinstaller iamtrans.spec
 
       - name: Rename binary
-        run: mv dist/ITrans dist/ITrans-linux
+        run: mv dist/iamtrans dist/iamtrans-linux
 
       - uses: actions/upload-artifact@v4
         with:
-          name: ITrans-linux
-          path: dist/ITrans-linux
+          name: iamtrans-linux
+          path: dist/iamtrans-linux
 
   # macOS 构建
   build-macos:
@@ -73,15 +73,15 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build with PyInstaller
-        run: pyinstaller ITrans.spec
+        run: pyinstaller iamtrans.spec
 
       - name: Rename binary
-        run: mv dist/ITrans dist/ITrans-macos
+        run: mv dist/iamtrans dist/iamtrans-macos
 
       - uses: actions/upload-artifact@v4
         with:
-          name: ITrans-macos
-          path: dist/ITrans-macos
+          name: iamtrans-macos
+          path: dist/iamtrans-macos
 
   # Windows 构建
   build-windows:
@@ -99,15 +99,15 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build with PyInstaller
-        run: pyinstaller ITrans.spec
+        run: pyinstaller iamtrans.spec
 
       - name: Rename binary
-        run: mv dist/ITrans.exe dist/ITrans-windows.exe
+        run: mv dist/iamtrans.exe dist/iamtrans-windows.exe
 
       - uses: actions/upload-artifact@v4
         with:
-          name: ITrans-windows
-          path: dist/ITrans-windows.exe
+          name: iamtrans-windows
+          path: dist/iamtrans-windows.exe
 
   # 发布到 GitHub Releases
   release:
@@ -120,39 +120,39 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            ITrans-linux/ITrans-linux
-            ITrans-macos/ITrans-macos
-            ITrans-windows/ITrans-windows.exe
+            iamtrans-linux/iamtrans-linux
+            iamtrans-macos/iamtrans-macos
+            iamtrans-windows/iamtrans-windows.exe
           body: |
-            ## ITrans ${{ github.ref_name }}
+            ## iamtrans ${{ github.ref_name }}
 
-            终端翻译工具，支持 Google Translate 和 MyMemory 双引擎。
+            终端翻译工具，支持有道翻译、Google Translate 和 MyMemory 三引擎。
 
             ### 下载
 
             | 平台 | 文件 |
             |------|------|
-            | Linux | `ITrans-linux` |
-            | macOS | `ITrans-macos` |
-            | Windows | `ITrans-windows.exe` |
+            | Linux | `iamtrans-linux` |
+            | macOS | `iamtrans-macos` |
+            | Windows | `iamtrans-windows.exe` |
 
             ### 使用
 
             ```bash
             # Linux/macOS
-            chmod +x ITrans-*
-            ./ITrans-linux              # 启动 TUI
-            ./ITrans-linux Hello World  # 简洁模式
+            chmod +x iamtrans-*
+            ./iamtrans-linux              # 启动 TUI
+            ./iamtrans-linux Hello World  # 简洁模式
 
             # Windows
-            ITrans-windows.exe          # 启动 TUI
-            ITrans-windows.exe Hello    # 简洁模式
+            iamtrans-windows.exe          # 启动 TUI
+            iamtrans-windows.exe Hello    # 简洁模式
             ```
 
             ### pip 安装
 
             ```bash
-            pip install ITrans
-            itrans              # 启动 TUI
-            itrans Hello World  # 简洁模式
+            pip install iamtrans
+            iamtrans              # 启动 TUI
+            iamtrans Hello World  # 简洁模式
             ```

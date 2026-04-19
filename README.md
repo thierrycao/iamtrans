@@ -1,15 +1,15 @@
 <div align="center">
 
-# ITrans
+# iamtrans
 
 **终端翻译，就该这么用**
 
 Enter 一敲，翻译就到。不换行，不卡顿，不占屏。
 
-[![PyPI](https://img.shields.io/pypi/v/ITrans?color=blue)](https://pypi.org/project/ITrans/)
-[![Python](https://img.shields.io/pypi/pyversions/ITrans?color=green)](https://pypi.org/project/ITrans/)
+[![PyPI](https://img.shields.io/pypi/v/iamtrans?color=blue)](https://pypi.org/project/iamtrans/)
+[![Python](https://img.shields.io/pypi/pyversions/iamtrans?color=green)](https://pypi.org/project/iamtrans/)
 [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
-[![Downloads](https://img.shields.io/pypi/dm/ITrans?color=purple)](https://pypi.org/project/ITrans/)
+[![Downloads](https://img.shields.io/pypi/dm/iamtrans?color=purple)](https://pypi.org/project/iamtrans/)
 
 </div>
 
@@ -22,7 +22,7 @@ Enter 一敲，翻译就到。不换行，不卡顿，不占屏。
 但它不是那种"输入→等待→输出"的玩意儿。
 
 ```bash
-$ itrans Hello World
+$ iamtrans Hello World
 你好世界
 ```
 
@@ -48,8 +48,8 @@ $ itrans Hello World
 
 ## 为什么用它？
 
-| 问题 | ITrans 的答案 |
-|------|---------------|
+| 问题 | iamtrans 的答案 |
+|------|-----------------|
 | Enter 会换行？ | 重写了 TextArea，Enter = 翻译，不换行 |
 | 网络请求卡 UI？ | Worker 后台线程，主线程继续响应 |
 | 要选语言？ | 检测中文自动翻译成英文，检测英文自动翻译成中文 |
@@ -63,29 +63,29 @@ $ itrans Hello World
 ### pip（推荐）
 
 ```bash
-pip install ITrans
+pip install iamtrans
 ```
 
 ### 二进制（无需 Python）
 
-从 [Releases](https://github.com/thierrycao/ITrans/releases) 下载：
+从 [Releases](https://github.com/thierrycao/iamtrans/releases) 下载：
 
 | 平台 | 文件 |
 |------|------|
-| Linux | ITrans-linux |
-| macOS | ITrans-macos |
-| Windows | ITrans-windows.exe |
+| Linux | iamtrans-linux |
+| macOS | iamtrans-macos |
+| Windows | iamtrans-windows.exe |
 
 ```bash
-chmod +x ITrans-macos
-./ITrans-macos
+chmod +x iamtrans-macos
+./iamtrans-macos
 ```
 
 ### 从源码
 
 ```bash
-git clone https://github.com/thierrycao/ITrans.git
-cd ITrans
+git clone https://github.com/thierrycao/iamtrans.git
+cd iamtrans
 pip install -e .
 ```
 
@@ -98,7 +98,7 @@ pip install -e .
 直接运行，启动浮窗：
 
 ```bash
-itrans
+iamtrans
 ```
 
 **快捷键**：
@@ -115,16 +115,16 @@ itrans
 适合脚本调用、管道操作：
 
 ```bash
-itrans Hello World
+iamtrans Hello World
 # -> 你好世界
 
-itrans 你好世界
+iamtrans 你好世界
 # -> Hello World（自动检测中文，翻译成英文）
 
-itrans --to ja Hello
+iamtrans --to ja Hello
 # -> 
 
-itrans --list
+iamtrans --list
 # -> 列出所有语言
 ```
 
@@ -240,7 +240,7 @@ def detect_language(text):
 ## 项目结构
 
 ```
-src/itrans/
+src/iamtrans/
 ├── main.py           # CLI 入口，参数解析
 ├── translator/
 │   └── engine.py     # 翻译引擎 + 词典 + 语言检测
@@ -273,7 +273,7 @@ MIT。随便用，随便改，随便发。
 
 <div align="center">
 
-**有问题？[开个 Issue](https://github.com/thierrycao/ITrans/issues)**
+**有问题？[开个 Issue](https://github.com/thierrycao/iamtrans/issues)**
 
 **想贡献？[看 CONTRIBUTING.md](CONTRIBUTING.md)**
 

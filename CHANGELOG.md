@@ -18,12 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 三引擎支持：有道(默认)、Google Translate、MyMemory
 
 **CLI 模式**
-- `itrans` 启动 TUI（默认浮窗模式）
-- `itrans Hello World` 简洁翻译输出
+- `iamtrans` 启动 TUI（默认浮窗模式）
+- `iamtrans Hello World` 简洁翻译输出
 - 支持 `--from`、`--to`、`--engine` 参数
 
 **打包发布**
-- pip 包支持 (`pip install ITrans`)
+- pip 包支持 (`pip install iamtrans`)
 - PyInstaller 跨平台二进制（Linux/macOS/Windows）
 - GitHub CI/CD：自动 PyPI 发布 + 二进制构建 + Release
 - 本地打包脚本：`scripts/build_local.sh`、`scripts/build_binary.sh`
@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Architecture
 
 ```
-src/itrans/
+src/iamtrans/
 ├── translator/engine.py   # 翻译引擎 + 有道词典 API
 ├── ui/app.py              # Textual TUI 三列布局
 └── main.py                # CLI 入口

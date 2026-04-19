@@ -12,7 +12,7 @@ set -e
 
 MODE=${1:-test}
 
-echo "=== ITrans PyPI 发布 ==="
+echo "=== iamtrans PyPI 发布 ==="
 echo "发布模式: $MODE"
 
 # 进入项目根目录
@@ -126,9 +126,9 @@ echo ""
 echo "发布完成！"
 echo ""
 if [ "$MODE" == "prod" ]; then
-    echo "安装: pip install ITrans"
-    echo "主页: https://pypi.org/project/ITrans/"
+    echo "安装: pip install iamtrans"
+    echo "主页: https://pypi.org/project/iamtrans/"
 else
-    echo "测试安装: pip install --index-url https://test.pypi.org/simple/ ITrans"
-    echo "主页: https://test.pypi.org/project/ITrans/"
+    echo "测试安装: pip install --index-url https://test.pypi.org/simple/ iamtrans"
+    echo "主页: https://test.pypi.org/project/iamtrans/"
 fi

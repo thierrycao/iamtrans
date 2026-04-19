@@ -1,4 +1,4 @@
-# ITrans 技术架构
+# iamtrans 技术架构
 
 一个终端翻译工具的技术解剖。
 
@@ -171,7 +171,7 @@ twine upload dist/*  # 发布到 PyPI
 **pyproject.toml 关键配置**：
 ```toml
 [project.scripts]
-itrans = "itrans:main"  # 入口点
+iamtrans = "iamtrans:main"  # 入口点
 
 [tool.setuptools.packages.find]
 where = ["src"]  # 源码目录
@@ -180,13 +180,13 @@ where = ["src"]  # 源码目录
 ### PyInstaller 二进制
 
 ```bash
-pyinstaller ITrans.spec  # 单文件可执行
+pyinstaller iamtrans.spec  # 单文件可执行
 ```
 
 **隐藏导入**（必须声明，否则打包失败）：
 ```python
 hiddenimports=[
-    'itrans', 'itrans.main', 'itrans.translator', 'itrans.ui',
+    'iamtrans', 'iamtrans.main', 'iamtrans.translator', 'iamtrans.ui',
     'textual', 'textual.app', 'textual.widgets',
     'deep_translator', 'deep_translator.google_translator',
 ]
@@ -198,9 +198,9 @@ hiddenimports=[
 push tag 'v*'
   -> release.yml 触发
   -> build-pypi: python -m build -> twine upload
-  -> build-linux: pyinstaller -> ITrans-linux
-  -> build-macos: pyinstaller -> ITrans-macos
-  -> build-windows: pyinstaller -> ITrans-windows.exe
+  -> build-linux: pyinstaller -> iamtrans-linux
+  -> build-macos: pyinstaller -> iamtrans-macos
+  -> build-windows: pyinstaller -> iamtrans-windows.exe
   -> release: 创建 GitHub Release，上传所有文件
 ```
 

@@ -1,4 +1,4 @@
-# src/itrans/translator/__init__.py
+# src/iamtrans/translator/__init__.py
 """翻译引擎模块
 
 封装有道、Google、MyMemory 翻译服务 + 有道词典查询。
@@ -13,7 +13,7 @@ API 无需认证，直接调用：
 - 有道词典: dict.youdao.com/jsonapi
 
 Example:
-    >>> from itrans.translator import TranslatorEngine
+    >>> from iamtrans.translator import TranslatorEngine
     >>> engine = TranslatorEngine('youdao')
     >>> engine.translate('Hello')
     你好

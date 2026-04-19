@@ -409,7 +409,7 @@ class TranslatorEngine:
         try:
             url = f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
             req = urllib.request.Request(url)
-            req.add_header('User-Agent', 'ITrans/1.0')
+            req.add_header('User-Agent', 'iamtrans/1.0')
 
             with urllib.request.urlopen(req, timeout=10) as response:
                 data = json.loads(response.read().decode('utf-8'))

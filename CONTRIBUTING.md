@@ -1,4 +1,4 @@
-# Contributing to ITrans
+# Contributing to iamtrans
 
 欢迎贡献代码、报告问题、提出建议。
 
@@ -6,8 +6,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/thierrycao/ITrans.git
-cd ITrans
+git clone https://github.com/thierrycao/iamtrans.git
+cd iamtrans
 
 # 安装开发依赖
 pip install -e ".[dev]"
@@ -19,8 +19,8 @@ python run_tui.py
 ## 项目结构
 
 ```
-itrans/
-├── src/itrans/           # 源码
+iamtrans/
+├── src/iamtrans/           # 源码
 │   ├── main.py           # CLI 入口
 │   ├── translator/       # 翻译引擎 + 词典
 │   └── ui/               # TUI 界面
@@ -94,7 +94,7 @@ pytest tests/
 
 # 安装测试
 pip install dist/*.whl
-itrans Hello  # 应输出翻译结果
+iamtrans Hello  # 应输出翻译结果
 ```
 
 ## 提交 PR
@@ -114,7 +114,7 @@ itrans Hello  # 应输出翻译结果
 
 ## 报告问题
 
-在 [Issues](https://github.com/thierrycao/ITrans/issues) 提交：
+在 [Issues](https://github.com/thierrycao/iamtrans/issues) 提交：
 
 - 描述问题（预期的行为 vs 实际行为）
 - 提供复现步骤

@@ -30,16 +30,16 @@ jobs:
       - name: Check imports
         run: |
           cd src
-          python -c "import itrans"
-          python -c "from itrans.main import main"
-          python -c "from itrans.translator import TranslatorEngine, ENGINES, LANGUAGES"
-          python -c "from itrans.ui.app import ITransFloatApp"
+          python -c "import iamtrans"
+          python -c "from iamtrans.main import main"
+          python -c "from iamtrans.translator import TranslatorEngine, ENGINES, LANGUAGES"
+          python -c "from iamtrans.ui.app import IAmTransFloatApp"
 
       - name: Test CLI
         run: |
           cd src
-          python -c "from itrans.main import main; main(['--list'])"
-          python -c "from itrans.main import main; main(['Hello', '--to', 'zh-CN'])"
+          python -c "from iamtrans.main import main; main(['--list'])"
+          python -c "from iamtrans.main import main; main(['Hello', '--to', 'zh-CN'])"
 
       - name: Verify package build
         run: |
