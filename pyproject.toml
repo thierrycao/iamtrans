@@ -3,7 +3,7 @@ name = "iamtrans"
 version = "1.0.0"
 description = "Terminal-based translation tool with TUI interface"
 readme = "README.md"
-license = "MIT"
+license = {file = "LICENSE"}
 authors = [{name = "Thierry Cao", email = "iamthierrycao@gmail.com"}]
 keywords = ["translation", "translate", "tui", "terminal", "youdao", "google"]
 classifiers = [
